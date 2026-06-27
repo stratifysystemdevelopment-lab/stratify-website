@@ -7,499 +7,472 @@
   
   <title>STRATIFY | Premium System Development</title>
   <meta name="description" content="STRATIFY System Development creates premium custom business systems, payroll systems, accounting systems, and enterprise software." />
-  <meta name="keywords" content="System Development, Payroll System, Accounting System, Custom Software, Business Solutions, Web App Development" />
-  <meta property="og:title" content="STRATIFY System Development" />
-  <meta property="og:description" content="Build smarter. Operate faster. Scale better. Premium software solutions for your business." />
-  <meta property="og:image" content="assets/showcase.jpg" />
-  <meta property="og:type" content="website" />
   
   <!-- Link to External CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- BACKGROUND AMBIENT LIGHTNING -->
+  <div class="lightning-container">
+    <div class="flash"></div>
+    <div class="streak streak-1"></div>
+    <div class="streak streak-2"></div>
+  </div>
+
+  <!-- FLOATING LIVE STATS BAR -->
+  <div class="live-stats">
+    <div class="stat-box">
+      <div class="stat-icon">👁️</div>
+      <div>
+        <strong id="visitorCount">14,205</strong>
+        <small>Total Visitors</small>
+      </div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-icon pulse">🟢</div>
+      <div>
+        <strong id="activeCount">12</strong>
+        <small>Active Now</small>
+      </div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-icon">📄</div>
+      <div>
+        <strong id="quoteCount">1,832</strong>
+        <small>Quotes Requested</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
   <header class="topbar">
     <div class="wrap">
       <div class="nav">
-        <a class="brand" href="#home">
+        <a class="brand tab-link" href="#home" data-target="home">
           <div class="brand-logo">
             <img src="assets/logo.png" alt="STRATIFY logo">
           </div>
           <div>
-            <h1>STRATIFY (Strategy + Simplify)</h1>
+            <h1>STRATIFY</h1>
             <small>System Development</small>
           </div>
         </a>
         <nav class="menu">
-          <a href="#services">Services</a>
-          <a href="#solutions">Solutions</a>
-          <a href="#process">Process</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#team">Team</a>
-          <a href="#quote">Quotation</a>
-          <a href="#contact">Contact</a>
+          <a href="#home" class="tab-link active-link" data-target="home">Home</a>
+          <a href="#services" class="tab-link" data-target="services">Services</a>
+          <a href="#portfolio" class="tab-link" data-target="portfolio">Portfolio</a>
+          <a href="#team" class="tab-link" data-target="team">Team</a>
+          <a href="#contact" class="tab-link" data-target="contact">Contact</a>
         </nav>
         <div class="top-actions">
           <button class="btn-sm mobile-toggle" id="menuToggle" type="button">Menu</button>
-          <a class="btn" href="#quote">Request Quotation</a>
+          <a class="btn tab-link" href="#contact" data-target="contact">Request Quote</a>
         </div>
       </div>
       <div class="mobile-menu" id="mobileMenu">
         <div class="menu-stack">
-          <a href="#services">Services</a>
-          <a href="#solutions">Solutions</a>
-          <a href="#process">Process</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#team">Team</a>
-          <a href="#quote">Quotation</a>
-          <a href="#contact">Contact</a>
+          <a href="#home" class="tab-link active-link" data-target="home">Home</a>
+          <a href="#services" class="tab-link" data-target="services">Services</a>
+          <a href="#portfolio" class="tab-link" data-target="portfolio">Portfolio</a>
+          <a href="#team" class="tab-link" data-target="team">Team</a>
+          <a href="#contact" class="tab-link" data-target="contact">Contact</a>
         </div>
       </div>
     </div>
   </header>
 
-  <main id="home" class="hero reveal">
-    <div class="wrap hero-grid">
-      <section>
-        <div class="eyebrow">Premium business software studio</div>
-        <h2>Build smarter.<br>Operate faster.<br>Scale better.</h2>
-        <p>
-          STRATIFY System Development creates premium custom software for payroll, accounting, business operations,
-          HR, allocations, dashboards, client portals, and enterprise workflows. We design systems that match your process,
-          not the other way around.
-        </p>
-        <div class="hero-actions">
-          <a class="btn" href="#quote">Get a Quotation</a>
-          <a class="btn-ghost" href="#services">Explore Services</a>
-          <a class="btn-ghost" id="facebookBtn" href="#" target="_blank" rel="noopener">Facebook Page</a>
-        </div>
-        <div class="marquee" aria-hidden="true">
-          <span>Custom Business Systems • Payroll Systems • Accounting Systems • Allocation Tools • Client Portals • Dashboards • Automation • Reports • Support •</span>
-        </div>
-        <div class="hero-kpis">
-          <div class="kpi tilt-element"><b>Responsive</b><span>Desktop to mobile</span></div>
-          <div class="kpi tilt-element"><b>Fast</b><span>Inquiry to quotation</span></div>
-          <div class="kpi tilt-element"><b>Professional</b><span>Premium UI and UX</span></div>
+  <!-- MAIN SPA CONTAINER -->
+  <main class="pages-container">
+    
+    <!-- ================= PAGE 1: HOME ================= -->
+    <div id="tab-home" class="tab-page active">
+      <section class="hero reveal">
+        <div class="wrap hero-grid">
+          <section>
+            <div class="eyebrow">Premium business software studio</div>
+            <h2>Build smarter.<br>Operate faster.<br>Scale better.</h2>
+            <p>
+              STRATIFY System Development creates premium custom software for payroll, accounting, business operations,
+              HR, allocations, dashboards, client portals, and enterprise workflows. We design systems that match your process.
+            </p>
+            <div class="hero-actions">
+              <a class="btn tab-link" href="#contact" data-target="contact">Get a Quotation</a>
+              <a class="btn-ghost tab-link" href="#services" data-target="services">Explore Services</a>
+            </div>
+            <div class="marquee" aria-hidden="true">
+              <span>Custom Business Systems • Payroll Systems • Accounting Systems • Allocation Tools • Client Portals • Dashboards • Automation • Reports • Support •</span>
+            </div>
+            <div class="hero-kpis">
+              <div class="kpi tilt-element"><b>Responsive</b><span>Desktop to mobile</span></div>
+              <div class="kpi tilt-element"><b>Fast</b><span>Inquiry to quotation</span></div>
+              <div class="kpi tilt-element"><b>Professional</b><span>Premium UI & UX</span></div>
+            </div>
+          </section>
+
+          <aside class="hero-card">
+            <div class="card-top">
+              <div class="pill">Enterprise-ready solutions</div>
+              <div class="card-list">
+                <div class="card-item tilt-element">
+                  <strong>Payroll Automation</strong>
+                  <span>Employee records, salary computation, deductions, overtime, allowances, payslips.</span>
+                </div>
+                <div class="card-item tilt-element">
+                  <strong>Accounting & Reports</strong>
+                  <span>Income, expenses, summaries, ledger views, and business reporting for management.</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-bottom">
+              <div class="accent-line"></div>
+              <div class="stats-2">
+                <div class="kpi tilt-element"><b>UI</b><span>Luxury inspired</span></div>
+                <div class="kpi tilt-element"><b>UX</b><span>Easy to use</span></div>
+              </div>
+            </div>
+          </aside>
         </div>
       </section>
 
-      <aside class="hero-card">
-        <div class="card-top">
-          <div class="pill">Enterprise-ready solutions</div>
-          <div class="card-list">
-            <div class="card-item tilt-element">
-              <strong>Payroll Automation</strong>
-              <span>Employee records, salary computation, deductions, overtime, allowances, payslips, and printable reports.</span>
+      <section class="section reveal">
+        <div class="wrap">
+          <div class="section-head">
+            <h3>How we work</h3>
+            <p>We keep the process clear so you know what happens from inquiry to delivery.</p>
+          </div>
+          <div class="timeline">
+            <div class="step tilt-element">
+              <b>1</b>
+              <div>
+                <h5>Discovery</h5>
+                <p>We review your business needs, current process, must-have features, and the user roles involved.</p>
+              </div>
             </div>
-            <div class="card-item tilt-element">
-              <strong>Accounting & Reports</strong>
-              <span>Income, expenses, summaries, ledger views, and business reporting for management and audit use.</span>
+            <div class="step tilt-element">
+              <b>2</b>
+              <div>
+                <h5>Design and planning</h5>
+                <p>We map the screens, workflow, forms, print layouts, and system structure before building.</p>
+              </div>
             </div>
-            <div class="card-item tilt-element">
-              <strong>Custom Build Systems</strong>
-              <span>From one department tool to a full company platform, we build according to your requirements and budget.</span>
+            <div class="step tilt-element">
+              <b>3</b>
+              <div>
+                <h5>Development and testing</h5>
+                <p>We develop the system, test every feature, and polish the experience for desktop, tablet, and mobile use.</p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="card-bottom">
-          <div class="accent-line"></div>
-          <div class="stats-2">
-            <div class="kpi tilt-element"><b>UI</b><span>Luxury inspired</span></div>
-            <div class="kpi tilt-element"><b>UX</b><span>Easy to use</span></div>
+      </section>
+    </div>
+
+    <!-- ================= PAGE 2: SERVICES ================= -->
+    <div id="tab-services" class="tab-page">
+      <section class="section reveal">
+        <div class="wrap">
+          <div class="section-head">
+            <h3>Services we offer</h3>
+            <p>We provide software solutions that help businesses save time, reduce manual work, and keep operations organized.</p>
+          </div>
+          <div class="grid-3">
+            <article class="service tilt-element">
+              <div class="kicker">Payroll</div>
+              <h4>Payroll System</h4>
+              <p>Manage employee profiles, salary computation, cut-off periods, deductions, attendance, and payslip generation.</p>
+              <ul>
+                <li>Salary and net pay computation</li>
+                <li>Payslip and payroll summary</li>
+                <li>Employee masterlist</li>
+              </ul>
+            </article>
+            <article class="service tilt-element">
+              <div class="kicker">Accounting</div>
+              <h4>Accounting System</h4>
+              <p>Track financial activity and generate organized records for internal monitoring and reporting.</p>
+              <ul>
+                <li>Income and expense tracking</li>
+                <li>Report summaries</li>
+                <li>Transaction history</li>
+              </ul>
+            </article>
+            <article class="service tilt-element">
+              <div class="kicker">Custom Build</div>
+              <h4>Custom Business System</h4>
+              <p>We build the exact system your business needs—without forcing you into a generic template.</p>
+              <ul>
+                <li>Admin dashboard and user roles</li>
+                <li>Reports, approvals, forms</li>
+                <li>Scalable architecture</li>
+              </ul>
+            </article>
           </div>
         </div>
-      </aside>
+      </section>
+
+      <section class="section reveal">
+        <div class="wrap">
+          <div class="section-head">
+            <h3>What we can build</h3>
+            <p>One platform can support many departments and multiple users inside your company.</p>
+          </div>
+          <div class="story-grid">
+            <article class="story tilt-element">
+              <div class="kicker">Core solutions</div>
+              <h4>Business systems for daily operations</h4>
+              <p>Perfect for offices, agencies, service companies, clinics, retail shops, and growing businesses that need a premium-looking system with practical tools.</p>
+              <div class="tag-row">
+                <span class="tag">Admin panel</span>
+                <span class="tag">Users & roles</span>
+                <span class="tag">Automation</span>
+              </div>
+            </article>
+            <article class="story tilt-element">
+              <div class="kicker">Ideal for</div>
+              <h4>Payroll, accounting, and internal tools</h4>
+              <p>Designed for businesses that need one organized system instead of many files, spreadsheets, and manual processes.</p>
+              <div class="tag-row">
+                <span class="tag">Payroll</span>
+                <span class="tag">Accounting</span>
+                <span class="tag">HR tools</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ================= PAGE 3: PORTFOLIO ================= -->
+    <div id="tab-portfolio" class="tab-page">
+      <section class="section reveal">
+        <div class="wrap">
+          <div class="section-head">
+            <h3>Portfolio & media</h3>
+            <p>Here are some examples of our premium software interfaces and business solutions.</p>
+          </div>
+          <div class="grid-2">
+            <div class="panel tilt-element">
+              <div class="kicker">Our Work</div>
+              <h4>System Screenshots</h4>
+              <p>A visual representation of our custom dashboards, data tables, and user interfaces.</p>
+              
+              <div class="upload-preview-grid">
+                <div class="media-thumb">
+                  <img src="assets/portfolio-1.jpg" alt="Portfolio Preview 1" loading="lazy">
+                </div>
+                <div class="media-thumb">
+                  <img src="assets/portfolio-2.jpg" alt="Portfolio Preview 2" loading="lazy">
+                </div>
+                <div class="media-thumb">
+                  <img src="assets/portfolio-3.jpg" alt="Portfolio Preview 3" loading="lazy">
+                </div>
+              </div>
+            </div>
+
+            <div class="panel tilt-element">
+              <div class="kicker">Featured showcase</div>
+              <h4>Professional presentation blocks</h4>
+              <p>These cards are built to make the website feel more like a premium company site than a basic brochure page.</p>
+              <div class="tag-row" style="margin-top:18px;">
+                <span class="tag">Hero banner</span>
+                <span class="tag">Service cards</span>
+                <span class="tag">Responsive design</span>
+              </div>
+              <div class="accent-line"></div>
+              <div class="stats-2">
+                <div class="kpi"><b>Tablet</b><span>Flexible layout</span></div>
+                <div class="kpi"><b>Mobile</b><span>Friendly sections</span></div>
+              </div>
+              <div style="margin-top:16px;" class="img-frame">
+                <img src="assets/showcase.jpg" alt="Showcase banner" style="width:100%; border-radius:18px;">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ================= PAGE 4: TEAM ================= -->
+    <div id="tab-team" class="tab-page">
+      <section class="section reveal">
+        <div class="wrap">
+          <div class="section-head">
+            <h3>Meet the Founders</h3>
+            <p>The core leadership team driving STRATIFY's vision.</p>
+          </div>
+          <div class="grid-3">
+            <div class="team-card tilt-element">
+              <div class="team-img">
+                <img src="assets/degs.jpg" alt="Degs Quesada" loading="lazy">
+              </div>
+              <h4 class="team-name">Degs Quesada</h4>
+              <div class="team-role">Co-Founder & CTO</div>
+              <p class="team-desc">The technical mastermind behind Stratify's software engineering. He takes complex functional requirements and transforms them into clean, secure, and highly scalable source code.</p>
+            </div>
+
+            <div class="team-card tilt-element">
+              <div class="team-img">
+                <img src="assets/christian.jpg" alt="Christian Jay" loading="lazy">
+              </div>
+              <h4 class="team-name">Christian Jay</h4>
+              <div class="team-role">Co-Founder & CMO</div>
+              <p class="team-desc">He drives the market strategy, branding, and revenue growth. He specializes in understanding business pain points and connecting organizations with the right tech solutions.</p>
+            </div>
+
+            <div class="team-card tilt-element">
+              <div class="team-img">
+                <img src="assets/mara.jpg" alt="Mara Salceda" loading="lazy">
+              </div>
+              <h4 class="team-name">Mara Salceda</h4>
+              <div class="team-role">Co-Founder & CFO</div>
+              <p class="team-desc">She translates complex financial workflows, compliance standards, and business logic into concrete system blueprints, ensuring platforms are optimized for real-world operations.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ================= PAGE 5: CONTACT & FAQ ================= -->
+    <div id="tab-contact" class="tab-page">
+      
+      <section class="section reveal">
+        <div class="wrap">
+          <div class="section-head">
+            <h3>Request a quotation</h3>
+            <p>Fill out the form below to send your requirements directly to our team.</p>
+          </div>
+          <div class="contact-grid">
+            <div class="quote-panel tilt-element">
+              <div class="box enhanced-border">
+                <h4 style="margin:0 0 10px; font-size:28px; letter-spacing:-.04em; text-transform:uppercase;">Quotation form</h4>
+                <p style="margin:0 0 18px; color:var(--muted); line-height:1.85;">Tell us what system you need, how many users, and what features you want.</p>
+                
+                <form action="https://api.web3forms.com/submit" method="POST" id="quoteForm" class="form-grid">
+                  <input type="hidden" name="access_key" value="f234c829-4588-46a6-8391-acf36f11b889">
+                  <input type="hidden" name="subject" value="New Quotation Request from STRATIFY Website">
+                  <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
+                  <div class="form-2">
+                    <div>
+                      <label>Full Name</label>
+                      <input name="Full Name" type="text" placeholder="Your full name" required />
+                    </div>
+                    <div>
+                      <label>Company Name</label>
+                      <input name="Company Name" type="text" placeholder="Your company" required />
+                    </div>
+                  </div>
+                  <div class="form-2">
+                    <div>
+                      <label>Email</label>
+                      <input name="Email" type="email" placeholder="Your email" required />
+                    </div>
+                    <div>
+                      <label>Phone Number</label>
+                      <input name="Phone Number" type="tel" placeholder="Optional" />
+                    </div>
+                  </div>
+                  <div class="form-2">
+                    <div>
+                      <label>Service Needed</label>
+                      <select name="Service Needed" required>
+                        <option value="">Choose a service</option>
+                        <option>Payroll System</option>
+                        <option>Accounting System</option>
+                        <option>Custom Business System</option>
+                        <option>Other</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label>Number of Users</label>
+                      <input name="Number of Users" type="text" placeholder="Example: 10 users" />
+                    </div>
+                  </div>
+                  <div class="form-2">
+                    <div>
+                      <label>Budget Range</label>
+                      <input name="Budget Range" type="text" placeholder="Example: ₱50,000 - ₱120,000" />
+                    </div>
+                    <div>
+                      <label>Target Timeline</label>
+                      <input name="Target Timeline" type="text" placeholder="Example: 1 month" />
+                    </div>
+                  </div>
+                  <div>
+                    <label>Project Details</label>
+                    <textarea name="Project Details" placeholder="Describe the features you need..." required></textarea>
+                  </div>
+                  <button class="btn" type="submit" id="submitQuoteBtn">Send quotation request</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="contact-panel">
+              <div class="box tilt-element enhanced-border">
+                <h4 style="margin:0 0 12px; font-size:28px; letter-spacing:-.04em; text-transform:uppercase;">Contact information</h4>
+                <div class="contact-list">
+                  <div class="contact-item">
+                    <strong>Email</strong>
+                    <div>shuty04g33@gmail.com</div>
+                  </div>
+                  <div class="contact-item">
+                    <strong>Facebook Page</strong>
+                    <div>/stratifysystemdev</div>
+                  </div>
+                </div>
+                <div class="socials">
+                  <a class="social-link" id="gmailBtn" href="#">Email us</a>
+                  <a class="social-link" id="facebookBtn" href="#" target="_blank" rel="noopener">Facebook Page</a>
+                </div>
+              </div>
+
+              <!-- COMMENT SECTION -->
+              <div class="box tilt-element enhanced-border" style="margin-top: 18px;">
+                <div class="kicker">Community</div>
+                <h4 style="margin:0 0 12px; font-size:24px; letter-spacing:-.04em;">Leave a Comment</h4>
+                <div class="comments-list" id="commentsDisplay">
+                  <!-- JS will load comments here -->
+                </div>
+                <form id="commentForm" style="margin-top: 16px;">
+                  <input type="text" id="commentName" placeholder="Your Name" style="margin-bottom:8px;" required>
+                  <textarea id="commentText" placeholder="Write your feedback..." style="min-height:80px; margin-bottom:12px;" required></textarea>
+                  <button type="submit" class="btn-sm" style="width:100%; border:1px solid rgba(121,163,255,.5);">Post Comment</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="wrap">
+          <div class="section-head">
+            <h3>Frequently Asked Questions</h3>
+          </div>
+          <div class="faq-container">
+            <div class="faq-item">
+              <div class="faq-question">How long does it take to build a system? <span class="faq-icon">+</span></div>
+              <div class="faq-answer">It depends on the complexity. Standard systems take about 3 to 6 weeks, while custom builds can take 2 to 3 months.</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">Is the system cloud-based or installed locally? <span class="faq-icon">+</span></div>
+              <div class="faq-answer">We highly recommend cloud-based web applications so you can access them securely anywhere.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
   </main>
 
-  <section id="services" class="section reveal">
-    <div class="wrap">
-      <div class="section-head">
-        <h3>Services we offer</h3>
-        <p>We provide software solutions that help businesses save time, reduce manual work, and keep operations organized.</p>
-      </div>
-      <div class="grid-3">
-        <article class="service tilt-element">
-          <div class="kicker">Payroll</div>
-          <h4>Payroll System</h4>
-          <p>Manage employee profiles, salary computation, cut-off periods, deductions, attendance, and payslip generation.</p>
-          <ul>
-            <li>Salary and net pay computation</li>
-            <li>Payslip and payroll summary</li>
-            <li>Employee masterlist</li>
-            <li>History and printable records</li>
-          </ul>
-        </article>
-        <article class="service tilt-element">
-          <div class="kicker">Accounting</div>
-          <h4>Accounting System</h4>
-          <p>Track financial activity and generate organized records for internal monitoring and reporting.</p>
-          <ul>
-            <li>Income and expense tracking</li>
-            <li>Report summaries</li>
-            <li>Transaction history</li>
-            <li>Exportable records</li>
-          </ul>
-        </article>
-        <article class="service tilt-element">
-          <div class="kicker">Custom Build</div>
-          <h4>Custom Business System</h4>
-          <p>We build the exact system your business needs—without forcing you into a generic template.</p>
-          <ul>
-            <li>Admin dashboard and user roles</li>
-            <li>Client / company workflow tools</li>
-            <li>Reports, approvals, forms</li>
-            <li>Scalable architecture</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="solutions" class="section reveal">
-    <div class="wrap">
-      <div class="section-head">
-        <h3>What we can build</h3>
-        <p>One platform can support many departments and multiple users inside your company.</p>
-      </div>
-      <div class="story-grid">
-        <article class="story tilt-element">
-          <div class="kicker">Core solutions</div>
-          <h4>Business systems for daily operations</h4>
-          <p>Perfect for offices, agencies, service companies, clinics, retail shops, and growing businesses that need a premium-looking system with practical tools.</p>
-          <div class="tag-row">
-            <span class="tag">Admin panel</span>
-            <span class="tag">Users & roles</span>
-            <span class="tag">Automation</span>
-            <span class="tag">Reports</span>
-            <span class="tag">Cloud-ready</span>
-          </div>
-        </article>
-        <article class="story tilt-element">
-          <div class="kicker">Ideal for</div>
-          <h4>Payroll, accounting, and internal tools</h4>
-          <p>Designed for businesses that need one organized system instead of many files, spreadsheets, and manual processes.</p>
-          <div class="tag-row">
-            <span class="tag">Payroll</span>
-            <span class="tag">Accounting</span>
-            <span class="tag">HR tools</span>
-            <span class="tag">CRM</span>
-            <span class="tag">Booking</span>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="process" class="section reveal">
-    <div class="wrap">
-      <div class="section-head">
-        <h3>How we work</h3>
-        <p>We keep the process clear so you know what happens from inquiry to delivery.</p>
-      </div>
-      <div class="timeline">
-        <div class="step tilt-element">
-          <b>1</b>
-          <div>
-            <h5>Discovery</h5>
-            <p>We review your business needs, current process, must-have features, and the user roles involved.</p>
-          </div>
-        </div>
-        <div class="step tilt-element">
-          <b>2</b>
-          <div>
-            <h5>Design and planning</h5>
-            <p>We map the screens, workflow, forms, print layouts, and system structure before building.</p>
-          </div>
-        </div>
-        <div class="step tilt-element">
-          <b>3</b>
-          <div>
-            <h5>Development and testing</h5>
-            <p>We develop the system, test every feature, and polish the experience for desktop, tablet, and mobile use.</p>
-          </div>
-        </div>
-        <div class="step tilt-element">
-          <b>4</b>
-          <div>
-            <h5>Launch and support</h5>
-            <p>After deployment, we can assist with improvements, additional modules, and future upgrades.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="portfolio" class="section reveal">
-    <div class="wrap">
-      <div class="section-head">
-        <h3>Portfolio & media</h3>
-        <p>Here are some examples of our premium software interfaces and business solutions.</p>
-      </div>
-      <div class="grid-2">
-        <div class="panel tilt-element">
-          <div class="kicker">Our Work</div>
-          <h4>System Screenshots</h4>
-          <p>A visual representation of our custom dashboards, data tables, and user interfaces.</p>
-          
-          <div class="upload-preview-grid">
-            <div class="media-thumb">
-              <img src="assets/portfolio-1.jpg" alt="Portfolio Preview 1" loading="lazy" onerror="this.style.display='none'">
-            </div>
-            <div class="media-thumb">
-              <img src="assets/portfolio-2.jpg" alt="Portfolio Preview 2" loading="lazy" onerror="this.style.display='none'">
-            </div>
-            <div class="media-thumb">
-              <img src="assets/portfolio-3.jpg" alt="Portfolio Preview 3" loading="lazy" onerror="this.style.display='none'">
-            </div>
-          </div>
-        </div>
-
-        <div class="panel tilt-element">
-          <div class="kicker">Featured showcase</div>
-          <h4>Professional presentation blocks</h4>
-          <p>These cards are built to make the website feel more like a premium company site than a basic brochure page.</p>
-          <div class="tag-row" style="margin-top:18px;">
-            <span class="tag">Hero banner</span>
-            <span class="tag">Service cards</span>
-            <span class="tag">Quotation form</span>
-            <span class="tag">Responsive design</span>
-          </div>
-          <div class="accent-line"></div>
-          <div class="stats-2">
-            <div class="kpi"><b>Tablet</b><span>Flexible layout</span></div>
-            <div class="kpi"><b>Mobile</b><span>Friendly sections</span></div>
-          </div>
-          <div style="margin-top:16px;" class="img-frame">
-            <img src="assets/showcase.jpg" alt="Showcase banner" style="width:100%; border-radius:18px;" onerror="this.style.display='none'">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="team" class="section reveal">
-    <div class="wrap">
-      <div class="section-head">
-        <h3>Meet the Founders</h3>
-        <p>The core leadership team driving STRATIFY's vision, combining technical expertise, market strategy, and financial architecture.</p>
-      </div>
-      <div class="grid-3">
-        <!-- Founder 1 -->
-        <div class="team-card tilt-element">
-          <div class="team-img">
-            <img src="assets/degs.jpg" alt="Degs Quesada" loading="lazy" onerror="this.style.display='none'">
-          </div>
-          <h4 class="team-name">Degs Quesada</h4>
-          <div class="team-role">Co-Founder & CTO</div>
-          <p class="team-desc">The technical mastermind behind Stratify's software engineering. He takes complex functional requirements and transforms them into clean, secure, and highly scalable source code. From designing backend architecture to perfecting system integrations, he ensures that our platforms deliver seamless performance and robust reliability for every user.</p>
-        </div>
-
-        <!-- Founder 2 -->
-        <div class="team-card tilt-element">
-          <div class="team-img">
-            <img src="assets/christian.jpg" alt="Christian Jay" loading="lazy" onerror="this.style.display='none'">
-          </div>
-          <h4 class="team-name">Christian Jay</h4>
-          <div class="team-role">Co-Founder & CMO</div>
-          <p class="team-desc">He drives the market strategy, branding, and revenue growth for Stratify. He specializes in understanding business pain points and connecting organizations with the right tech solutions. By managing strategic client relationships and leading our sales and marketing initiatives, he ensures that Stratify's reach the right audience and deliver high business impact.</p>
-        </div>
-
-        <!-- Founder 3 -->
-        <div class="team-card tilt-element">
-          <div class="team-img">
-            <img src="assets/mara.jpg" alt="Mara Salceda" loading="lazy" onerror="this.style.display='none'">
-          </div>
-          <h4 class="team-name">Mara Salceda</h4>
-          <div class="team-role">Co-Founder & CFO / Product Architect</div>
-          <p class="team-desc">She directs the financial operations of Stratify while serving as the core domain expert for our software development. Leveraging her extensive accounting background, she translates complex financial workflows, compliance standards, and business logic into concrete system blueprints. She ensures that our platforms are not just technically functional, but deeply practical and optimized for real-world business operations.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="testimonials" class="section reveal">
-    <div class="wrap">
-      <div class="section-head">
-        <h3>Trusted by Businesses</h3>
-        <p>What our clients say about the systems we've built.</p>
-      </div>
-      <div class="grid-3">
-        <div class="testimonial tilt-element">
-          <div>
-            <div class="quote-icon">"</div>
-            <p class="testi-text">"Our payroll process went from taking 3 days manually to just a few clicks. The interface is beautiful and so easy to teach to our HR staff."</p>
-          </div>
-          <p class="testi-author">— Logistics Company HR</p>
-        </div>
-        <div class="testimonial tilt-element">
-          <div>
-            <div class="quote-icon">"</div>
-            <p class="testi-text">"STRATIFY built an accounting dashboard that perfectly matched how we run our agency. No bloated features, just exactly what we needed."</p>
-          </div>
-          <p class="testi-author">— Creative Agency CEO</p>
-        </div>
-        <div class="testimonial tilt-element">
-          <div>
-            <div class="quote-icon">"</div>
-            <p class="testi-text">"The communication during development was fantastic. We now have a central portal for all our employee records."</p>
-          </div>
-          <p class="testi-author">— Retail Operations Manager</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="faq" class="section reveal">
-    <div class="wrap">
-      <div class="section-head">
-        <h3>Frequently Asked Questions</h3>
-        <p>Everything you need to know about our development process.</p>
-      </div>
-      <div class="faq-container">
-        <div class="faq-item">
-          <div class="faq-question">How long does it take to build a system? <span class="faq-icon">+</span></div>
-          <div class="faq-answer">It depends on the complexity. Standard payroll or accounting systems take about 3 to 6 weeks, while large custom enterprise builds can take 2 to 3 months.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">Is the system cloud-based or installed locally? <span class="faq-icon">+</span></div>
-          <div class="faq-answer">We highly recommend and build cloud-based web applications so you can access them securely anywhere. However, local network deployment is possible upon request.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">Do you offer after-sales support or maintenance? <span class="faq-icon">+</span></div>
-          <div class="faq-answer">Yes, we provide free bug-fixing post-launch. After that, we offer affordable monthly maintenance packages for updates and server management.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="quote" class="section reveal">
-    <div class="wrap">
-      <div class="section-head">
-        <h3>Request a quotation</h3>
-        <p>Fill out the form below to send your requirements directly to our team.</p>
-      </div>
-      <div class="contact-grid">
-        <div class="quote-panel tilt-element">
-          <div class="box">
-            <h4 style="margin:0 0 10px; font-size:28px; letter-spacing:-.04em; text-transform:uppercase;">Quotation form</h4>
-            <p style="margin:0 0 18px; color:var(--muted); line-height:1.85;">Tell us what system you need, how many users, and what features you want.</p>
-            
-            <form action="https://api.web3forms.com/submit" method="POST" id="quoteForm" class="form-grid">
-              <input type="hidden" name="access_key" value="f234c829-4588-46a6-8391-acf36f11b889">
-              <input type="hidden" name="subject" value="New Quotation Request from STRATIFY Website">
-              <input type="hidden" name="redirect" value="https://web3forms.com/success">
-
-              <div class="form-2">
-                <div>
-                  <label for="qName">Full Name</label>
-                  <input id="qName" name="Full Name" type="text" placeholder="Your full name" required />
-                </div>
-                <div>
-                  <label for="qCompany">Company / Business Name</label>
-                  <input id="qCompany" name="Company Name" type="text" placeholder="Your company" required />
-                </div>
-              </div>
-              <div class="form-2">
-                <div>
-                  <label for="qEmail">Email</label>
-                  <input id="qEmail" name="Email" type="email" placeholder="Your email" required />
-                </div>
-                <div>
-                  <label for="qPhone">Phone Number</label>
-                  <input id="qPhone" name="Phone Number" type="tel" placeholder="Optional" />
-                </div>
-              </div>
-              <div class="form-2">
-                <div>
-                  <label for="qService">Service Needed</label>
-                  <select id="qService" name="Service Needed" required>
-                    <option value="">Choose a service</option>
-                    <option>Payroll System</option>
-                    <option>Accounting System</option>
-                    <option>Custom Business System</option>
-                    <option>HR / Employee Management</option>
-                    <option>CRM / Client Portal</option>
-                    <option>Inventory / POS System</option>
-                    <option>Other</option>
-                  </select>
-                </div>
-                <div>
-                  <label for="qUsers">Number of Users</label>
-                  <input id="qUsers" name="Number of Users" type="text" placeholder="Example: 10 users" />
-                </div>
-              </div>
-              <div class="form-2">
-                <div>
-                  <label for="qBudget">Budget Range</label>
-                  <input id="qBudget" name="Budget Range" type="text" placeholder="Example: ₱50,000 - ₱120,000" />
-                </div>
-                <div>
-                  <label for="qTimeline">Target Timeline</label>
-                  <input id="qTimeline" name="Target Timeline" type="text" placeholder="Example: 1 month" />
-                </div>
-              </div>
-              <div>
-                <label for="qDetails">Project Details</label>
-                <textarea id="qDetails" name="Project Details" placeholder="Describe the features you need, workflow, reports, and any special requirements..." required></textarea>
-              </div>
-              <button class="btn" type="submit">Send quotation request</button>
-            </form>
-          </div>
-        </div>
-
-        <div class="contact-panel tilt-element" id="contact">
-          <div class="box">
-            <h4 style="margin:0 0 12px; font-size:28px; letter-spacing:-.04em; text-transform:uppercase;">Contact information</h4>
-            <div class="contact-list">
-              <div class="contact-item">
-                <strong>Email</strong>
-                <div id="gmailText">shuty04g33@gmail.com</div>
-              </div>
-              <div class="contact-item">
-                <strong>Facebook Page</strong>
-                <div id="fbText">https://www.facebook.com/stratifysystemdev</div>
-              </div>
-              <div class="contact-item">
-                <strong>Services</strong>
-                <div>Business systems, payroll systems, accounting systems, custom builds, dashboards, and automation.</div>
-              </div>
-            </div>
-            <div class="socials">
-              <a class="social-link" id="gmailBtn" href="#">Email us</a>
-              <a class="social-link" id="facebookBtn2" href="#" target="_blank" rel="noopener">Facebook Page</a>
-              <a class="social-link" href="#quote">Request quote</a>
-            </div>
-          </div>
-
-          <div class="box" style="margin-top: 18px;">
-            <div class="kicker">Brand identity</div>
-            <h4>STRATIFY Strategy + Simplify</h4>
-            <p>
-              Your business identity is integrated into the layout. The page uses a premium corporate style and is flexible for desktop, laptop, tablet, and mobile.
-            </p>
-            <div style="margin-top:24px; display:flex; justify-content:center;" class="img-frame tilt-element">
-              <img src="assets/logo.png" alt="STRATIFY logo preview" style="max-width: 140px; border-radius: 20px; box-shadow: 0 15px 30px rgba(0,0,0,.4);" onerror="this.style.display='none'"/>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
+  <footer class="footer" style="padding-bottom: 100px;">
+    <!-- Extra padding to prevent footer from hiding behind stats bar -->
     <div class="wrap footer-row">
-      <div>© 2026 STRATIFY System Development. Premium business software solutions.</div>
-      <div>
-        <a href="#home">Top</a> · 
-        <a href="#services">Services</a> · 
-        <a href="#portfolio">Media</a> · 
-        <a href="#">Privacy Policy</a> · 
-        <a href="#">Terms of Service</a>
-      </div>
+      <div>© 2026 STRATIFY System Development. Premium software solutions.</div>
     </div>
   </footer>
 
-  <!-- Link to External JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>

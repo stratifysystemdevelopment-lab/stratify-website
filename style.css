@@ -21,7 +21,6 @@
 
 html {
   scroll-behavior: smooth;
-  touch-action: manipulation;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -40,8 +39,7 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-blend-mode: normal, normal, normal, normal, overlay;
-  overflow-x: hidden;
-  overscroll-behavior-y: none;
+  overflow-x: hidden; /* Pinipigilan ang pag-scroll pakaliwa't pakanan */
 }
 
 a {
@@ -340,9 +338,10 @@ button, input, textarea, select {
   font-size: 13px;
   border: 1px solid transparent;
   transition: all .3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  white-space: normal; /* Fix para di magtulak sa gilid yung text sa button pag mahaba */
+  white-space: normal;
   position: relative;
   overflow: hidden;
+  text-align: center;
 }
 
 .btn {
@@ -848,6 +847,7 @@ section.section {
   border-bottom: 1px solid rgba(255,255,255,.08);
   background: rgba(255,255,255,.02);
   box-shadow: inset 0 5px 15px rgba(0,0,0,.3);
+  max-width: 100%; /* Pinipigilan ang pagtulak sa gilid */
 }
 
 .marquee span {
@@ -1202,22 +1202,13 @@ textarea {
 }
 
 /* =======================================
-   ANTI-BLOWOUT MOBILE FIX (The Nuclear Option)
+   FINAL MOBILE FIXES (Scrollable & Fitted)
    ======================================= */
 @media (max-width: 900px) {
-  /* Pwersahin ang buong body na wag lumagpas sa screen */
-  html, body {
-    max-width: 100vw !important;
-    overflow-x: hidden !important;
-    width: 100% !important;
-  }
-
-  /* Pwersahin ang container na mag-contain sa loob */
   .wrap {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 0 16px !important;
-    box-sizing: border-box !important;
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
   }
 
   .menu, .desktop-only {
@@ -1228,36 +1219,50 @@ textarea {
     padding: 24px 0 46px;
   }
 
-  /* Pwersahin ang CSS Grid na ibaba ang laman at putulin pag sumobra */
-  .hero-grid, .grid-3, .grid-2, .story-grid, .contact-grid, .card-list {
-    grid-template-columns: minmax(0, 1fr) !important;
+  /* Pwersahin ang main layout na maging isang pababang column */
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
     gap: 24px;
+    width: 100%;
   }
 
-  /* I-force ang TEXT na bumaba at pumutol imbes na itulak ang cards */
+  /* ITO ANG SOLUTION SA RED CIRCLE MO:
+     Pwersahin ang stats boxes (Responsive, Fast, UI, UX) na pumailalim
+     sa halip na magkatabi para mag-fit sa screen. */
+  .stats-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  /* Siguraduhing wrap ang mahabang words at hindi nanunulak */
   .hero p, .hero h2, .card-item span, .card-item strong, .kpi span, .service p, .step p {
-    max-width: 100% !important;
-    white-space: pre-wrap !important;
-    word-wrap: break-word !important;
-    overflow-wrap: break-word !important;
+    white-space: normal;
+    word-break: break-word;
   }
 
   .hero h2 {
     font-size: clamp(32px, 10vw, 54px);
   }
 
-  /* I-force ang CARDS na sumunod sa lapad ng cellphone */
+  /* Siguraduhing ang buong hero-card box ay hanggang screen edge lang */
   .hero-card, .card-item, .kpi, .box, .step {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important; /* Fix para sa Flex/Grid blowout */
+    width: 100%;
+    max-width: 100%;
     padding: 20px 16px;
     height: auto;
-    box-sizing: border-box !important;
+    box-sizing: border-box;
+    animation: none; /* Tinanggal ang float para hindi lumabas ng screen minsan */
+    transform: none !important;
   }
 
-  .hero-kpis, .stats-2, .form-2 {
-    grid-template-columns: minmax(0, 1fr) !important;
+  .hero-kpis, .form-2, .grid-3, .grid-2, .story-grid, .contact-grid, .card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
   }
 
   .step b {
@@ -1266,6 +1271,8 @@ textarea {
   }
 
   .upload-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
 
@@ -1289,10 +1296,5 @@ textarea {
   .tilt-element {
     transition: none;
     transform: none !important;
-  }
-
-  .hero-card {
-    animation: none;
-    transform: translateY(0);
   }
 }
